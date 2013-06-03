@@ -7,12 +7,14 @@
 //
 
 #import "TableViewController.h"
+#import "ViewController.h"
 
-@interface TableViewController ()
+@interface RootViewController: TableViewController
 
 @end
 
 @implementation TableViewController
+
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -26,13 +28,51 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self setTitle:@"Test"];
+    [self.view setBackgroundColor:[UIColor brownColor]];
+    //self.swipeGesture = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipeLeft)];
+    //[self.swipeGesture setDirection:UISwipeGestureRecognizerDirectionLeft];
+    //[self.view addGestureRecognizer:self.swipeGesture];
 
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
+
+//-(void)swipeLeft
+//{
+//    if (self.swipeGesture.direction == UISwipeGestureRecognizerDirectionLeft) {
+//           [self cycleFromController:self ToController: self.viewController];
+//    }
+// 
+//}
+//
+//
+//-(void)cycleFromController: (UIViewController *)fromController ToController: (UIViewController *)toController
+//{
+//    [fromController willMoveToParentViewController:toController];
+//    
+//    [self.view removeFromSuperview];
+//    
+//    [self transitionFromViewController:fromController toViewController:toController duration: 5.0f options:
+//        0
+//                            animations: ^{
+//                                            //toController.view.frame = fromController.view.frame;
+//                                            [UIView beginAnimations:nil context:nil];
+//                                            [UIView setAnimationCurve:UIViewAnimationCurveLinear];
+//                                            [UIView setAnimationDuration: 5.0f];
+//                                            [UIView commitAnimations];
+//                                
+//                            }
+//  completion:^(BOOL finished){
+//        [toController removeFromParentViewController];
+//        [fromController didMoveToParentViewController:self];
+//    }];
+//            
+//    
+//}
+//
+//-(void)transitionFromViewController:(UIViewController *)fromViewController toViewController:(UIViewController *)toViewController duration:(NSTimeInterval)duration options:(UIViewAnimationOptions)options animations:(void (^)(void))animations completion:(void (^)(BOOL))completion
+//{
+//    
+//}
 
 - (void)didReceiveMemoryWarning
 {
@@ -44,25 +84,30 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
+
     // Return the number of sections.
-    return 0;
+    return 10;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
+
     // Return the number of rows in the section.
-    return 0;
+    return 1;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if ( cell == nil ) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+    }
+    
     
     // Configure the cell...
     
+    cell.textLabel.text = @"Something";
     return cell;
 }
 

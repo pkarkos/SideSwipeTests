@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MainView : UIView
+@interface MainView : UIScrollView
+
+- (id)initWithFrame:(CGRect)frame andYellow:(BOOL)yellowOrNot;
+
+@property (strong, nonatomic) UIButton *testButton;
 
 @end

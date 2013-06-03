@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+@class ViewController;
+
 @interface TableViewController : UITableViewController
+
+@property (strong, nonatomic) UISwipeGestureRecognizer *swipeGesture;
+@property (strong, nonatomic) ViewController *viewController;
 
 @end

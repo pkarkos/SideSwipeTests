@@ -10,11 +10,22 @@
 
 @implementation MainView
 
-- (id)initWithFrame:(CGRect)frame
+
+
+- (id)initWithFrame:(CGRect)frame andYellow:(BOOL)yellowOrNot
 {
     self = [super initWithFrame:frame];
     if (self) {
-        // Initialization code
+        if (yellowOrNot) {
+            [self setBackgroundColor:[UIColor yellowColor]];
+        }
+        else {
+            [self setBackgroundColor:[UIColor clearColor]];
+        }
+    self.testButton = [[UIButton alloc] initWithFrame:CGRectMake(360, 40, 100, 40)];
+    [self.testButton setBackgroundColor:[UIColor whiteColor]];
+    [self addSubview:self.testButton];
+        
     }
     return self;
 }

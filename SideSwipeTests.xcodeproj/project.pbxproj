@@ -17,7 +17,9 @@
 		D07D99781753044200A6A8BB /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D07D99771753044200A6A8BB /* Default@2x.png */; };
 		D07D997A1753044200A6A8BB /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D07D99791753044200A6A8BB /* Default-568h@2x.png */; };
 		D07D997D1753044200A6A8BB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D07D997C1753044200A6A8BB /* ViewController.m */; };
-		D07D99801753044200A6A8BB /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D07D997E1753044200A6A8BB /* ViewController.xib */; };
+		D07D99881753047900A6A8BB /* MainView.m in Sources */ = {isa = PBXBuildFile; fileRef = D07D99871753047900A6A8BB /* MainView.m */; };
+		D07D998B175306D300A6A8BB /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D07D998A175306D300A6A8BB /* TableViewController.m */; };
+		D07D99911756344600A6A8BB /* TestMainView.m in Sources */ = {isa = PBXBuildFile; fileRef = D07D99901756344600A6A8BB /* TestMainView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,7 +38,12 @@
 		D07D99791753044200A6A8BB /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		D07D997B1753044200A6A8BB /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		D07D997C1753044200A6A8BB /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		D07D997F1753044200A6A8BB /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		D07D99861753047800A6A8BB /* MainView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainView.h; sourceTree = "<group>"; };
+		D07D99871753047900A6A8BB /* MainView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainView.m; sourceTree = "<group>"; };
+		D07D9989175306D300A6A8BB /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
+		D07D998A175306D300A6A8BB /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
+		D07D998F1756344600A6A8BB /* TestMainView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestMainView.h; sourceTree = "<group>"; };
+		D07D99901756344600A6A8BB /* TestMainView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestMainView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,8 +94,13 @@
 				D07D99731753044200A6A8BB /* AppDelegate.m */,
 				D07D997B1753044200A6A8BB /* ViewController.h */,
 				D07D997C1753044200A6A8BB /* ViewController.m */,
-				D07D997E1753044200A6A8BB /* ViewController.xib */,
 				D07D996A1753044200A6A8BB /* Supporting Files */,
+				D07D99861753047800A6A8BB /* MainView.h */,
+				D07D99871753047900A6A8BB /* MainView.m */,
+				D07D9989175306D300A6A8BB /* TableViewController.h */,
+				D07D998A175306D300A6A8BB /* TableViewController.m */,
+				D07D998F1756344600A6A8BB /* TestMainView.h */,
+				D07D99901756344600A6A8BB /* TestMainView.m */,
 			);
 			path = SideSwipeTests;
 			sourceTree = "<group>";
@@ -162,7 +174,6 @@
 				D07D99761753044200A6A8BB /* Default.png in Resources */,
 				D07D99781753044200A6A8BB /* Default@2x.png in Resources */,
 				D07D997A1753044200A6A8BB /* Default-568h@2x.png in Resources */,
-				D07D99801753044200A6A8BB /* ViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,6 +187,9 @@
 				D07D99701753044200A6A8BB /* main.m in Sources */,
 				D07D99741753044200A6A8BB /* AppDelegate.m in Sources */,
 				D07D997D1753044200A6A8BB /* ViewController.m in Sources */,
+				D07D99881753047900A6A8BB /* MainView.m in Sources */,
+				D07D998B175306D300A6A8BB /* TableViewController.m in Sources */,
+				D07D99911756344600A6A8BB /* TestMainView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -188,14 +202,6 @@
 				D07D996D1753044200A6A8BB /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		D07D997E1753044200A6A8BB /* ViewController.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D07D997F1753044200A6A8BB /* en */,
-			);
-			name = ViewController.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
